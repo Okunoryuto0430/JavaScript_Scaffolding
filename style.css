@@ -1,0 +1,83 @@
+/* 全体のフォントと背景 */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* CodeMirrorエディタの高さ・丸角・スクロール */
+.CodeMirror {
+    height: 300px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* カスタムスクロールバー */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* モーダルオーバーレイ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* モーダルコンテンツ */
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+/* モーダルクローズボタン */
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #4a5568;
+}
+
+/* 非表示用クラス */
+.hidden {
+    display: none;
+}
+
+/* 課題表示エリアのpreタグのスタイル調整 */
+#challenge-display pre {
+    white-space: pre-wrap; /* 改行をそのまま表示し、必要に応じて折り返す */
+    word-break: break-all; /* 長い単語も折り返す */
+    background-color: #e0f2fe; /* bg-sky-100 相当 */
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875rem; /* text-sm */
+    color: #0c4a6e; /* text-sky-800 相当 */
+    border: 1px solid #bae6fd; /* border-sky-200 相当 */
+}
